@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Try throw</title>
+  </head>
+  <body>
+    <p>Input 5 or 10</p>
+    <input type="number" id="demo" />
+    <button type="submit" onclick="myFunction()">Submit</button>
+    <p id="neww"></p>
+    <script>
+      function myFunction() {
+        const message = document.getElementById("neww");
+        message.innerHTML = "";
+        const x = document.getElementById("demo").value;
+        try {
+          if (x == "") throw "empty";
+          if (isNaN(x)) throw "not a number";
+          if (x < 5) throw "is less";
+          if (x > 10) throw "is bigger";
+        } catch (e) {
+          message.innerHTML = e;
+        } finally {
+          //   document.getElementById("neww").innerHTML = "the answer is " + x;
+        }
+      }
+    </script>
+  </body>
+</html>

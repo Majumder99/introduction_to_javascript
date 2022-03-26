@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Looping</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <!-- // Looping in object -->
+    <p id="loop"></p>
+    <!-- while loop -->
+    <p id="sourav"></p>
+    <script>
+      let text = "";
+      let txt = "";
+      let t = "";
+      const cars = ["volvo", "saab", "BMW"];
+      const person = { fname: "John", lname: "Doe", age: 25 };
+      for (i = 0; i < cars.length; i++) {
+        text += "Text is " + cars[i] + "<br>";
+      }
+      for (let x in person) {
+        txt += " " + person[x];
+      }
+      let j = 0;
+      while (j < 10) {
+        t += "Number is " + j + "<br>";
+        j++;
+      }
+      document.getElementById("demo").innerHTML = text;
+      document.getElementById("loop").innerHTML = txt;
+      document.getElementById("sourav").innerHTML = t;
+    </script>
+  </body>
+</html>
